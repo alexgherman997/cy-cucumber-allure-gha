@@ -31,11 +31,14 @@ jobs:
           install-command: npm ci
     
       - name: install allure
+        if: always()
         run: npm install -g allure-commandline --save-dev && npm i -D @shelex/cypress-allure-plugin
       - name: generate report
+        if: always()
         run: npm run test
       - name: upload report
         uses: actions/upload-artifact@v2
+        if: always()
         with:
           name: cucumber-allure-report
           path: /home/runner/work/cy-cucumber-allure-gha/cy-cucumber-allure-gha/allure-report
