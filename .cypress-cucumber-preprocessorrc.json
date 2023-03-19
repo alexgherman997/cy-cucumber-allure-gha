@@ -18,6 +18,7 @@
       "[filepath]\\***.{js,ts}",
       "[filepath].{js,ts}",
       "cypress\\e2e\\step_definitions\\*.{js,ts}",
-      "cypress/step_definitions/*.js"
+      "cypress/step_definitions/*.js",
+      "cypress/support/step_definitions/*.js"
     ]
   }

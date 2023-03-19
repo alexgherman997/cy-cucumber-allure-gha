@@ -30,4 +30,7 @@ module.exports = defineConfig({
       allureReuseAfterSpec: true,
     },
   },
+  video: false,
+  trashAssetsBeforeRuns: false,
+  
 });
