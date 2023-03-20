@@ -9,9 +9,12 @@ Given("A web browser is at the saucelabs login page", () => {
   cy.visit("/");
 });
 
+Given("A ecommerge is visited", () => {
+  cy.visit("https://www.demoblaze.com/");
+});
+
 When("A user enters the username {string}, the password {string}, and clicks on the login button", (username,password) => {
   loginPage.submitLogin(username,password)
-  
 });
 
 When("A user provides incorrect credentials, and clicks on the login button", (table) => {
@@ -23,8 +26,9 @@ When("A user provides incorrect credentials, and clicks on the login button", (t
   });
 });
 Then("the url will contains the inventory subdirectory", () => {
-  cy.url().should("contains", "/inventory.html");
+  cy.url().should("contains", "/inventory.html")
 });
+
 Then("The error message {string} is displayed", (errorMessage) => {
-  loginPage.elements.errorMessage().should("have.text", errorMessage+"failed");
+  loginPage.elements.errorMessage().should("have.text", errorMessage);
 });
