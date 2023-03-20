@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Mar 20 17:55:42 GMT 2023","Mon Mar 20 17:55:43 GMT 2023","694","","Login page","","","","Incorrect Username Login",""
+"passed","Mon Mar 20 17:55:43 GMT 2023","Mon Mar 20 17:55:44 GMT 2023","753","","Login page","","","","Incorrect Password Login",""
+"passed","Mon Mar 20 17:55:37 GMT 2023","Mon Mar 20 17:55:41 GMT 2023","3972","","Login page","","","","Success Login",""
+"passed","Mon Mar 20 17:55:33 GMT 2023","Mon Mar 20 17:55:36 GMT 2023","2146","","E2e feature","","","","Add to cart",""
+"passed","Mon Mar 20 17:55:41 GMT 2023","Mon Mar 20 17:55:42 GMT 2023","797","","Login page","","","","Blocked Login",""
