@@ -1,38 +1,25 @@
 pipeline {
-   agent any
+  agent {
+    // this image provides everything needed to run Cypress
+    docker {
+      image 'cypress/base:latest'
+    }
+  }
 
-   tools {nodejs "Node16"}
+  stages {
+    stage('build and test') {
+      environment {
+        // we will be recording test results and video on Cypress dashboard
+        // to record we need to set an environment variable
+        // we can load the record key variable from credentials store
+        // see https://jenkins.io/doc/book/using/using-credentials/
+        //CYPRESS_RECORD_KEY = credentials('cypress-example-kitchensink-record-key')
+      }
 
-   environment {
-       CHROME_BIN = '/bin/google-chrome'
-      
-   }
-
-   stages {
-       stage('Dependencies') {
-           steps {
-               sh 'npm i'
-           }
-       }
-       stage('e2e Tests') {
-         Parallel{
-             stage('Test 1') {
-                  steps {
-                sh 'npm run cypress:ci'
-                  }
-               }
-             
-             stage('Test 2') {
-                  steps {
-                sh 'npm run cypress2:ci'
-                  }
-               }
-
-       }
-       stage('Deploy') {
-           steps {
-               echo 'Deploying....'
-           }
-       }
-   }
+      steps {
+        sh 'npm ci'
+        sh "npm run test:ci:record"
+      }
+    }
+  }
 }
