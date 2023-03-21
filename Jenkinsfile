@@ -1,17 +1,21 @@
 pipeline {
-  agent {
-    // this image provides everything needed to run Cypress
-    docker {
-      image 'cypress/base:latest'
-    }
-  }
-
+  agent any
+  tools {nodejs "node"}
   stages {
-    stage('build and test') {
+  
+    // Install and verify Cypress
+    stage('installation') {
       steps {
-        sh 'npm ci'
-        sh "npm run test:ci:record"
+        sh 'npm install cypress --save-dev'
+      }
+    }
+    stage('run e2e tests') {
+      steps {
+        sh 'npm run cy:runAuthnMFE'
       }
     }
   }
+  post {
+    // Send an email in case of failure
+    }
 }
