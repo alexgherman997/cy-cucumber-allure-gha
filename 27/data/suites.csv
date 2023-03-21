@@ -1,0 +1,6 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Tue Mar 21 08:24:01 GMT 2023","Tue Mar 21 08:24:03 GMT 2023","2303","","E2e feature","","","","Add to cart",""
+"passed","Tue Mar 21 08:24:06 GMT 2023","Tue Mar 21 08:24:10 GMT 2023","4055","","Login page","","","","Success Login",""
+"passed","Tue Mar 21 08:24:12 GMT 2023","Tue Mar 21 08:24:13 GMT 2023","895","","Login page","","","","Incorrect Password Login",""
+"passed","Tue Mar 21 08:24:10 GMT 2023","Tue Mar 21 08:24:11 GMT 2023","1097","","Login page","","","","Blocked Login",""
+"passed","Tue Mar 21 08:24:11 GMT 2023","Tue Mar 21 08:24:12 GMT 2023","938","","Login page","","","","Incorrect Username Login",""
